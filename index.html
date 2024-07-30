@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PHOTOGRAPH & VIDEOGRAPHY Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main" id="main-container">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">KIZZA</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="#" onclick="showSection('home')">HOME</a></li>
+                    <li><a href="#" onclick="showSection('about')">ABOUT</a></li>
+                    <li><a href="#" onclick="showSection('service')">SERVICE</a></li>
+                    <li><a href="#" onclick="showSection('package')">PACKAGE</a></li>
+                    <li><a href="#" onclick="showSection('contact')">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type To text">
+                <a href="#"> <button class="btn">Search</button></a>
+            </div>
+        </div>
+
+        <div class="content">
+            <div id="home" class="section">
+                <h1>POST<br><span>Production</span> <br>Course</h1>
+                <p class="par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt neque expedita atque eveniet quis nesciunt. Quos nulla vero consequuntur, fugit nemo ad delectus a quae totam ipsa illum minus laudantium?</p>
+            </div>
+            
+            <div id="about" class="section" style="display: none;">
+                <div class="about-block">
+                  <h1>About Us</h1>
+                  <h2>POST Production Course</h2>
+                </div>
+                <div class="about-block">
+                  <h2>Our Mission</h2>
+                  <p>Our mission is to equip aspiring professionals with the skills and confidence to create stunning visual content. Through hands-on training, expert guidance, and practical experience, we aim to help you achieve your creative goals and stand out in the competitive field of post-production.</p>
+                </div>
+                <div class="about-block">
+                  <h2>What We Offer</h2>
+                  <ul>
+                    <li><strong>Expert Instruction:</strong> Learn from seasoned professionals who bring years of industry experience.</li>
+                    <li><strong>Hands-On Training:</strong> Gain practical skills through real-world projects and assignments.</li>
+                    <li><strong>Cutting-Edge Tools:</strong> Work with the latest software and technology used in the industry.</li>
+                    <li><strong>Personalized Support:</strong> Receive tailored feedback and support to help you grow.</li>
+                  </ul>
+                </div>
+                
+              </div>
+            
+            <div id="service" class="section" style="display:none;">
+                <h1>Our Services</h1>
+                <p>We offer a wide range of post-production services including:</p>
+                <ul class="services-list">
+                    <li>
+                       
+                        Video Editing
+                    </li>
+                    <li>
+                        
+                        Sound Design
+                    </li>
+                    <li>
+                        
+                        Color Correction
+                    </li>
+                    <li>
+                        
+                        Visual Effects
+                    </li>
+                </ul>
+                
+            </div>
+            
+            <div id="package" class="section" style="display:none;">
+                <h1>Our Packages</h1>
+                <p>We have several packages to suit your needs, from basic editing services to full post-production solutions. Contact us for more details on our packages and pricing.</p>
+            </div>
+            
+            <div id="contact" class="section" style="display:none;">
+                <h1>Contact Us</h1>
+                <p>If you have any questions or would like to get in touch, please contact us at: <br>Email: contact@postproductioncourse.com<br>Phone: +1-234-567-890</p>
+            <div>
+                <div class="form">
+                <h2>Login Here</h2>
+                <input type="email" name="email" placeholder="Enter Email Here">
+                <input type="password" name="" placeholder="Enter Password Here">
+                <button class="btnn"><a href="#">Login</a></button>
+
+                <p class="link">Don't have an account<br>
+                <a href="#">Sign up </a> here</a></p>
+                <p class="liw">Log in with</p>
+</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            const mainContainer = document.getElementById('main-container');
+            
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            
+            document.getElementById(sectionId).style.display = 'block';
+            
+            if (sectionId === 'about') {
+                mainContainer.style.background = "linear-gradient(to top, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.5) 50%), url('https://images.pexels.com/photos/952264/pexels-photo-952264.jpeg')";
+                mainContainer.style.backgroundPosition = 'center';
+                mainContainer.style.backgroundSize = 'cover';
+            } else if (sectionId === 'home') {
+                mainContainer.style.background = "linear-gradient(to top, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.5) 50%), url('https://images.pexels.com/photos/598917/pexels-photo-598917.jpeg')";
+                mainContainer.style.backgroundPosition = 'center';
+                mainContainer.style.backgroundSize = 'cover';
+            }
+            else if (sectionId === 'service') {
+                mainContainer.style.background = "linear-gradient(to top, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.5) 50%), url('https://images.pexels.com/photos/3617531/pexels-photo-3617531.jpeg')";
+                mainContainer.style.backgroundPosition = 'center';
+                mainContainer.style.backgroundSize = 'cover';
+            } else {
+                mainContainer.style.background = "linear-gradient(to top, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.5) 50%), url('https://images.pexels.com/photos/598917/pexels-photo-598917.jpeg')";
+                mainContainer.style.backgroundPosition = 'center';
+                mainContainer.style.backgroundSize = 'cover';
+            }
+        }
+    </script>
+
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+</html>
